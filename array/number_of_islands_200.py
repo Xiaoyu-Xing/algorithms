@@ -3,7 +3,6 @@ def num_of_islands(grid):
     if not grid:
         return 0
     result = 0
-    queue = collections.deque()
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if int(grid[i][j]) == 1:
