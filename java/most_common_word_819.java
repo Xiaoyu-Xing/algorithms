@@ -14,4 +14,10 @@ public String mostCommonWord(String paragraph, String[] banned) {
         }
     }
     return ans;
+    // for the size of the same count of strings, could use another HashMap<Integer, Integer> countSame
+    // for (Integer i : count.values()){
+    //      countSame.put(i, countSame.getOrDefault(i, 0) + 1);
+    // }
+    // 
+    
 }
