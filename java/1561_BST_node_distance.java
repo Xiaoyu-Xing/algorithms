@@ -9,19 +9,6 @@ public class BSTNodeDistance {
 			right = null;
 		}
 	}
-	public Node root;
-
-	public BSTNodeDistance() {
-		root = null;
-	}
-	public BSTNodeDistance(int[] numbers) {
-		this();
-		for (int i = 0; i < numbers.length; i++) {
-			Node newNode = new Node(numbers[i]);
-			insertNode(root, newNode);
-		}
-	}
-	
 
 	private Node insertNode(Node root, Node newNode) {
 		if (root == null) {
@@ -46,9 +33,17 @@ public class BSTNodeDistance {
 		}
 		return root;
 	}
-
 	
+	public Node root;
 
+	public BSTNodeDistance(int[] numbers) {
+		root = null;
+		for (int i = 0; i < numbers.length; i++) {
+			Node newNode = new Node(numbers[i]);
+			insertNode(root, newNode);
+		}
+	}
+	
 	private Node LCA(Node root, int a, int b) {
 		// if a or b or both not in the BST, null or root may be returned
 		if (root == null) {
