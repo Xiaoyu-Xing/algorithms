@@ -42,3 +42,4 @@ public class Solution {
         return Math.sqrt(Math.pow((a.x - b.x), 2) + Math.pow((a.y - b.y), 2));
     }
 }
+// Time O(k+(n-k)logk), priority queue initialize with k, then poll with logk.
