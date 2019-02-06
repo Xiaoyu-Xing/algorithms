@@ -1,4 +1,4 @@
-// BFS, map
+// BFS, map, time O((r*c)^2) space O(r*c)
 class Solution {
     public int cutOffTree(List<List<Integer>> forest) {
         List<int[]> trees = new ArrayList();
@@ -42,7 +42,7 @@ class Solution {
                 int c = cur[1] + dc[di];
                 if (0 <= r && r < height && 0 <= c && c < width && !seen[r][c] && forest.get(r).get(c) > 0) {
                     seen[r][c] = true;
-                    queue.offer(new int[] {r, c, cur[2]}+1);
+                    queue.offer(new int[] {r, c, cur[2]+1});
                 }
             }
         }

@@ -6,7 +6,7 @@ class Solution {
         dfs(root);
         return ans;
     }
-    
+    // in order traversal
     public void dfs(TreeNode node) {
         if (node == null) return;
         dfs(node.left);
