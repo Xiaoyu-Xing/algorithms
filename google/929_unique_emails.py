@@ -27,3 +27,12 @@ class Solution:
                 ret = email
                 maximum = counting
         return ret
+
+solution = Solution()
+list1 = []
+print(solution.numUniqueEmails(list1))
+list2 = ['a+c@b.com', 'a.a@b.com', 'a+a@b.com', 'a.b.c+1@x.edu',
+         'a.b.c+2@x.edu', 'a.bc+1.1@x.edu', 'abc+2.3@x.edu']
+print(solution.numUniqueEmails(list2))
+list2 = ['@', '@', 'x@', 'x@', 'x@']
+print(solution.numUniqueEmails(list2))
