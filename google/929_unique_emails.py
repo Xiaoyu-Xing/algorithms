@@ -13,6 +13,8 @@ class Solution:
 # return most common emails.
 class Solution:
     def numUniqueEmails(self, emails: 'List[str]') -> 'int':
+        if not emails:
+            return None, 0
         from collections import defaultdict
         count = defaultdict(int)
         for email in emails:

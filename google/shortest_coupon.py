@@ -5,9 +5,7 @@ def shortes_coupon(s: 'list') ->'int':
         if number in count:
             ret = min(ret, i - count[number] + 1)
         count[number] = i
-    if ret == len(s) + 1:
-        return -1
-    return ret
+    return ret if ret <= len(s) else -1
 
 
 print(shortes_coupon([5, 3, 4, 2, 3, 4, 5, 7]))
