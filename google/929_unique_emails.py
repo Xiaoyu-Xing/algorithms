@@ -26,13 +26,16 @@ class Solution:
             if counting > maximum:
                 ret = email
                 maximum = counting
-        return ret
+        return ret, maximum
+
 
 solution = Solution()
 list1 = []
 print(solution.numUniqueEmails(list1))
 list2 = ['a+c@b.com', 'a.a@b.com', 'a+a@b.com', 'a.b.c+1@x.edu',
-         'a.b.c+2@x.edu', 'a.bc+1.1@x.edu', 'abc+2.3@x.edu']
+         'a.b....c+2@x.edu', 'a.bc+1.1@x.edu', 'abc+2.3@x.edu']
 print(solution.numUniqueEmails(list2))
-list2 = ['@', '@', 'x@', 'x@', 'x@']
-print(solution.numUniqueEmails(list2))
+list3 = ['@', '@', 'x@', 'x@', 'x@']
+print(solution.numUniqueEmails(list3))
+list4 = ['u.n.i.q.u.e@example.com', 'uni...que@example.com']
+print(solution.numUniqueEmails(list4))
