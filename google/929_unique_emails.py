@@ -41,3 +41,4 @@ list3 = ['@', '@', 'x@', 'x@', 'x@']
 print(solution.numUniqueEmails(list3))
 list4 = ['u.n.i.q.u.e@example.com', 'uni...que@example.com']
 print(solution.numUniqueEmails(list4))
+print('@'.split('@'))

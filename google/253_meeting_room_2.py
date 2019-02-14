@@ -8,9 +8,10 @@
 # Greedy, sorted by start time, arrange as many as possible meeting at the same room
 # without confilcts of next start time with last end time
 # Priority queue with end time in it.
+
+
+
 import heapq
-
-
 class Solution:
     def minMeetingRooms(self, intervals: 'List[Interval]') -> 'int':
         if not intervals:

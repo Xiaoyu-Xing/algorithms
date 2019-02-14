@@ -12,3 +12,8 @@ class Solution:
             usedChar[s[i]] = i
 
         return maxLength
+
+if __name__ == '__main__':
+    solution = Solution()
+    print(solution.lengthOfLongestSubstring('abcde'))
+    print(solution.lengthOfLongestSubstring('cabcdea'))
