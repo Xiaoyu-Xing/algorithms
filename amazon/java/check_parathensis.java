@@ -7,6 +7,7 @@ public class isValid {
         
         for (int i = 0; i < s.length(); i++) {
             if (stack.empty())  stack.push(s.charAt(i));
+            // [] {} differ by 2, () differ by 1
             else if (s.charAt(i) - stack.peek() == 1 || s.charAt(i) - stack.peek() == 2)    stack.pop();
             else    stack.push(s.charAt(i));
         }

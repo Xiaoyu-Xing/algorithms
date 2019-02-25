@@ -21,7 +21,7 @@ public class BSTNodeDistance {
 				return root;
 			} else {
 				return insertNode(root.right, newNode);
-			}
+		}
 
 		} else if (root.val > newNode.val) {
 			if (root.left == null) {
