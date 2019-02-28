@@ -50,3 +50,28 @@ def mark_by_bfs(queue, grid, i, j):
             grid[i][j] = 0
             queue.extend([(i, j + 1), (i, j - 1),
                           (i + 1, j), (i - 1, j)])
+
+# Aggregate together the helper function
+from collections import deque
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        counter = 0
+        height = len(grid)
+        if height == 0:
+            return 0
+        width = len(grid[0])
+        queue = [] # implement as deque will be BFS, as [] will be DFS
+        for i in range(height):
+            for j in range(width):
+                if grid[i][j] == '1':
+                    queue.append((i, j))
+                    while queue:
+                        ci, cj = queue.pop()
+                        if 0 <= ci < height and 0 <= cj < width and grid[ci][cj] == '1':
+                            grid[ci][cj] = '0'
+                            queue.append((ci + 1, cj))
+                            queue.append((ci - 1, cj))
+                            queue.append((ci, cj + 1))
+                            queue.append((ci, cj - 1))
+                    counter += 1
+        return counter

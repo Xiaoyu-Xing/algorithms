@@ -7,6 +7,9 @@ class Result{
 		this.value = value;
 	}
 }
+
+// Time complexity, n is the review for each id, m is the id number, O(m*n + m*nlogn)
+// space, O(m*n) or total number of element is the passed-in array
 public class High_Five {
 	public static Map<Integer, Double> getHighFive(Result[] results){
 	Map<Integer, Double> map = new HashMap<>();
@@ -41,8 +44,10 @@ public class High_Five {
 	}
 	return map;
 }
+}
 
-// Better, priority queue
+// Better, priority queue, n is average review in each id, m is number of id, time complexity O((n-5)*log5*m + m*5*log5)
+// space: O(m*5)
 public static Map<Integer, Double> getHighFive(Result[] results){
     Map<Integer, Double> result = new HashMap<>();
     Map<Integer, PriorityQueue<Integer>> map = new HashMap<>();
