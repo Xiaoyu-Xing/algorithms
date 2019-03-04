@@ -1,4 +1,4 @@
-# array, hash map
+# # array, hash map
 def two_sum(array, target):
     nums = {}
     for i, num in enumerate(array):
@@ -10,4 +10,4 @@ def two_sum(array, target):
 answer = two_sum([2, 11, 7, 15], 9)
 print(answer)
 
-# Note: Use hashmap when memorizing something would help.
+# # Note: Use hashmap when memorizing something would help.
