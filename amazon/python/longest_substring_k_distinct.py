@@ -48,11 +48,6 @@ def countkDist(str1, k):
 
     # Initialize result
     res = 0
-
-    # To store count of characters from
-    # 'a' to 'z'
-    cnt = [0] * 27
-
     # Consider all substrings beginning
     # with str[i]
     for i in range(0, n):
