@@ -23,7 +23,7 @@ print(non_repeating('abcdeabc'))
 
 # or use array
 def non_repeating_2(s):
-    counter = [0] * 26 * 2
+    counter = [0] * 26 * 2  # wrong
     for char in s:
         counter[ord(char) - 65] += 1
 
