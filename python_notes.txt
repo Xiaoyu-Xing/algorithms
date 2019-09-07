@@ -1,0 +1,2 @@
+*When we need to sort a list, but because "key" only can take the properties from this onject, rather than a complex computation between two objects (since the it is designed with the intention to reduce time complexity to O(n)) so if need to do a computation between two object, need to use functools.cmp_to_key function.
+*list.reverse() also O(n) time complexity. Resersed() only return an iterator.
